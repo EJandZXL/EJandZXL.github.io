@@ -24,13 +24,13 @@ export default {
         {
           title: '参宿四',
           artist: 'dk',
-          url: '../src/assets/DK - ベテルギウス.mp3',
+          url: 'http://s4bkpp959.hn-bkt.clouddn.com/DK%20-%20%E3%83%99%E3%83%86%E3%83%AB%E3%82%AE%E3%82%A6%E3%82%B9.flac',
           pic: '../src/assets/参宿四.jpg'
         },
         {
           title: '开普勒',
           artist: '孙燕姿',
-          url: '../src/assets/孙燕姿 - 克卜勒.mp3',
+          url: 'http://s4bkpp959.hn-bkt.clouddn.com/%E5%AD%99%E7%87%95%E5%A7%BF%20-%20%E5%85%8B%E5%8D%9C%E5%8B%92.flac',
           pic: '../src/assets/参宿四.jpg'
         }
       ]
