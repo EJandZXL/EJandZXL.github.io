@@ -11,7 +11,9 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "element-ui": "^2.15.14",
     "vue": "^2.5.2",
+    "vue-aplayer": "^1.6.1",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
