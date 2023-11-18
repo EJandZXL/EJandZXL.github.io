@@ -24,13 +24,13 @@ export default {
         {
           title: '参宿四',
           artist: 'dk',
-          url: '../src/assets/DK - ベテルギウス.flac',
+          url: '../src/assets/DK - ベテルギウス.mp3',
           pic: '../src/assets/参宿四.jpg'
         },
         {
           title: '开普勒',
           artist: '孙燕姿',
-          url: '../src/assets/孙燕姿 - 克卜勒.flac',
+          url: '../src/assets/孙燕姿 - 克卜勒.mp3',
           pic: '../src/assets/参宿四.jpg'
         }
       ]
