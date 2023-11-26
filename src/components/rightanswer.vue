@@ -1,15 +1,18 @@
 <template>
-    <div id="container">
+  <div id="container">
     <div id="header">
-      <h1 class="h_c">四周年快乐!</h1>
+      <h1 class="h_c">&#127775;四周年快乐!&#127775;</h1>
     </div>
-    <div id="content">
-
+    <div v-masonry class="box" id="content" fit-width="true">
+      <div v-masonry-tile v-for="pic in imgArr" :key="pic">
+        <img :src="pic.image" class="imgplay">
+        <p class="whitebox">{{ pic.date }}</p>
+      </div>
     </div>
     <div id="footer">
-      <aplayer :music="audio[0]" :list="audio" :mini="true" :autoplay="true" :repeat="repeat-all"></aplayer>
+      <aplayer :music="audio[0]" :list="audio" :mini="true" :autoplay="true" :repeat="repeat - all"></aplayer>
     </div>
-    </div>
+  </div>
 </template>
 
 <script>
@@ -18,7 +21,7 @@ export default {
   components: {
     aplayer
   },
-  data () {
+  data() {
     return {
       audio: [
         {
@@ -33,15 +36,253 @@ export default {
           url: '../src/assets/孙燕姿 - 克卜勒.mp3',
           pic: '../src/assets/参宿四.jpg'
         }
-      ]
+      ],
+      waterfallList: [],
+      imgArr: [
+        {
+          image: './static/img/IMG_20221220_151026.jpg',
+          date: '2022.12.20',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20221225_200325.jpg',
+          date: '2022.12.25',
+          words: ''
+        },
+        {
+          image: './static/img/mmexport1674370223240.jpg',
+          date: '2023.01.22',
+          words: ''
+        },
+        {
+          image: './static/img/mmexport1675145905092.jpg',
+          date: '2023.01.31',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20230214_173005.jpg',
+          date: '2023.02.14',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20230218_152304.jpg',
+          date: '2023.02.18',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20230219_162148.jpg',
+          date: '2023.02.19',
+          words: ''
+        },
+        {
+          image: './static/img/mmexport1678356157677.jpg',
+          date: '2023.03.09',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20230421_180238.jpg',
+          date: '2023.04.21',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20230424_201731.jpg',
+          date: '2023.04.24',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20230424_213906.jpg',
+          date: '2023.04.24',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20230501_113827.jpg',
+          date: '2023.05.01',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20230502_224843.jpg',
+          date: '2023.05.02',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20230504_211950.jpg',
+          date: '2023.05.04',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20230520_134551_Burst01.jpg',
+          date: '2023.05.20',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20230523_182925.jpg',
+          date: '2023.05.23',
+          words: ''
+        },
+        {
+          image: './static/img/mmexport1685461425979.jpg',
+          date: '2023.05.30',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20230604_151117.jpg',
+          date: '2023.06.04',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20230604_151921.jpg',
+          date: '2023.06.04',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20230604_215754.jpg',
+          date: '2023.06.04',
+          words: ''
+        },
+        {
+          image: './static/img/retouch_2023060418361305.jpg',
+          date: '2023.06.04',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20230605_124709.jpg',
+          date: '2023.06.05',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20230606_104844.jpg',
+          date: '2023.06.06',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20230606_160726.jpg',
+          date: '2023.06.06',
+          words: ''
+        },
+        {
+          image: './static/img/mmexport1686033094987.jpg',
+          date: '2023.06.06',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20230606_192610.jpg',
+          date: '2023.06.06',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20230615_154946.jpg',
+          date: '2023.06.15',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20230615_223547.jpg',
+          date: '2023.06.15',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20230616_174720.jpg',
+          date: '2023.06.16',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20230617_183943.jpg',
+          date: '2023.06.17',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20230618_191754.jpg',
+          date: '2023.06.18',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20230619_153112.jpg',
+          date: '2023.06.19',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20230619_164448.jpg',
+          date: '2023.06.19',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20230722_202917.jpg',
+          date: '2023.07.22',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20230903_194922.jpg',
+          date: '2023.09.03',
+          words: ''
+        },
+        {
+          image: './static/img/mmexport1696495090943.jpg',
+          date: '2023.10.05',
+          words: ''
+        },
+        {
+          image: './static/img/IMG_20231027_194812.jpg',
+          date: '2023.10.27',
+          words: ''
+        }
+      ],
+      waterfallImgWidth: 200, // 每个盒子的宽度
+      waterfallImgCol: 3, // 瀑布流的列数
+      waterfallImgRight: 10, // 每个盒子的右padding
+      waterfallImgBottom: 10, // 每个盒子的下padding
+      waterfallDeviationHeight: [],
+      imgList: []
     }
   },
   name: 'rightanswer'
 }
 </script>
 <style>
-.h_c {
-  color: white;
-  font-size: large;
+.imgplay {
+  width: 300px;
+  height: auto;
 }
-</style>
+
+.box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.whitebox {
+  color: white;
+  text-align: left;
+  margin-top: 0;
+}
+
+.h_c {
+  font: 76px "幼圆";
+  margin: 50px auto;
+  font-weight: 300;
+  text-align: center;
+  color: rgb(255, 252, 153);
+  -webkit-animation: bounce 2s infinite;
+  /*设置动画*/
+}
+
+@-webkit-keyframes bounce {
+
+  /*创建动画*/
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-30px);
+  }
+
+  60% {
+    -webkit-transform: translateY(-15px);
+  }
+}</style>
